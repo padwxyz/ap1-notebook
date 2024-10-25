@@ -1,0 +1,74 @@
+//PIC
+INSERT INTO `pics` (`id`, `pic_name`, `position`, `created_at`, `updated_at`) VALUES
+(NULL, 'IGB RIKY DARMAWAN', 'Team Leader', NULL, NULL),
+(NULL, 'ACHMAD REZA IRIANTO', 'Team Leader', NULL, NULL),
+(NULL, 'I PUTU NANA SUGIANTA MANDRA', 'Team Leader', NULL, NULL),
+(NULL, 'RESITA ANDRIANA', 'Team Leader', NULL, NULL),
+(NULL, 'PRAMUKO TRI PRASTOWO', 'Team Leader', NULL, NULL),
+(NULL, 'AHMAD FARDIANSAH', 'Team Leader', NULL, NULL),
+(NULL, 'LA ODE MUHAMMAD MAKMUN', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'THOMAS SIMON BUKSALWEMBUN', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'ARIF RAHARTOMO', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'MUGI ASRIANTO', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'RIJAULI FIKRI', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'ALTHOF FAJAR FAUZAN T', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'ANUGRAH PRATAMA', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'RIKO AFDHILLAH', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'RAAFI NUUR MUHAMMAD K.', 'Operation & Support (Organik)', NULL, NULL),
+(NULL, 'A.A CAHAYADI P.', 'Operation & Support', NULL, NULL),
+(NULL, 'A. RIFVAN ADHITIYA', 'Operation & Support', NULL, NULL),
+(NULL, 'FAYSHEL LATIFOLIA', 'Operation & Support', NULL, NULL),
+(NULL, 'I PUTU SUKMA ANTAR WIJAYA', 'Operation & Support', NULL, NULL),
+(NULL, 'KETUT TARJA', 'Operation & Support', NULL, NULL),
+(NULL, 'BENNY PERMANA', 'Operation & Support', NULL, NULL),
+(NULL, 'RYAN ARMY HARDIANTONI', 'Operation & Support', NULL, NULL),
+(NULL, 'I MADE BURGATAMA', 'Operation & Support', NULL, NULL),
+(NULL, 'MUCHLIS AL KHIDZIR', 'Operation & Support', NULL, NULL),
+(NULL, 'YUDI SUSTRAWAN', 'Operation & Support', NULL, NULL),
+(NULL, 'I G M SUGIRI ARNAWA', 'Operation & Support', NULL, NULL),
+(NULL, 'HENKY LESMANA', 'Operation & Support', NULL, NULL),
+(NULL, 'GILANG RAMADHAN', 'Operation & Support', NULL, NULL),
+(NULL, 'I GEDE WIRA AMBHIKA', 'Operation & Support', NULL, NULL),
+(NULL, 'WAYAN SUKAYASA', 'Operation & Support', NULL, NULL),
+(NULL, 'WILLY FERDINAND A.', 'Operation & Support', NULL, NULL),
+(NULL, 'WAHYU ANDIKA', 'Operation & Support', NULL, NULL),
+(NULL, 'KOMANG AGUS TRISNA ADI P.', 'Operation & Support', NULL, NULL),
+(NULL, 'AYUB RAHMAN HAKIM', 'Operation & Support', NULL, NULL),
+(NULL, 'NI PUTU RENI WIDAYANTI', 'Operation & Support', NULL, NULL);
+
+//LOCATION
+INSERT INTO `locations` (`id`, `location_name`, `created_at`, `updated_at`) VALUES
+(NULL, 'Terminal Internasional', NULL, NULL),
+(NULL, 'Terminal Domestik', NULL, NULL);
+
+//FACILITY
+INSERT INTO `facilities` (`id`, `location_id`, `facility_name`, `created_at`, `updated_at`) VALUES
+(NULL, 1, 'Detection, Scanning & Inspection Facility', NULL, NULL),
+(NULL, 1, 'Surveillance & Integrated Security System', NULL, NULL),
+(NULL, 2, 'Information, Communication & Network Facilities', NULL, NULL),
+(NULL, 2, 'Layanan Operasi dan Aplikasi', NULL, NULL);
+
+//CATEGORY
+INSERT INTO `categories` (`id`, `facility_id`, `category_name`, `created_at`, `updated_at`) VALUES
+(NULL, 1, 'X - RAY', NULL, NULL),
+(NULL, 1, 'ATRS', NULL, NULL),
+(NULL, 1, 'Walk Through', NULL, NULL),
+(NULL, 1, 'Hand Held Detector', NULL, NULL),
+(NULL, 1, 'Explossive Trace Detector & Itemiser', NULL, NULL),
+(NULL, 1, 'Explossive Liquid Detector', NULL, NULL),
+(NULL, 1, 'Body Scanner', NULL, NULL),
+(NULL, 2, 'CCTV', NULL, NULL),
+(NULL, 2, 'Bird Strike System', NULL, NULL);
+
+//ITEM
+INSERT INTO `items` (`id`, `category_id`, `item_name`, `quantity`, `condition`, `created_at`, `updated_at`) VALUES
+(NULL, 8, 'CCTV System', 10, 'Normal', NULL, NULL),
+(NULL, 8, 'CCTV Terminal Domestik', 8, 'Normal', NULL, NULL),
+(NULL, 8, 'CCTV Terminal Internasional', 7, 'Normal', NULL, NULL),
+(NULL, 8, 'CCTV Perimeter', 12, 'Not Normal', NULL, NULL),
+(NULL, 8, 'CCTV Gedung Luar Terminal dan Airside', 5, 'Not Normal', NULL, NULL),
+(NULL, 8, 'FDR', 3, 'Normal', NULL, NULL),
+(NULL, 9, 'Bird Stike System A - F', 4, 'Normal', NULL, NULL),
+(NULL, 9, 'Bird Strike System G', 6, 'Not Normal', NULL, NULL),
+(NULL, 9, 'Mobil Bird Detterent System', 2, 'Normal', NULL, NULL);
+
