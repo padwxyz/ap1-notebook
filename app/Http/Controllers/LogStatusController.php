@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Note;
+use App\Models\Item;
 
 class LogStatusController extends Controller
 {
     public function index()
     {
-        $notes = Note::with(['location', 'facility', 'category', 'item'])->paginate(10);
+        $items = Item::with('category.facility.location')->paginate(10);
         $title = 'Log Status';
 
-        return view('pages.user.log_status.log', compact('notes', 'title'));
+        return view('pages.user.log_status.log', compact('items', 'title'));
     }
 }

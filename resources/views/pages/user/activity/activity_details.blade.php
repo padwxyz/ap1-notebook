@@ -10,7 +10,7 @@
             <!-- Header with Back Button and Title -->
             <div class="flex items-center mb-4">
                 <!-- Back Button with Icon -->
-                <a href="{{ url()->previous() }}" class="p-2 rounded-full hover:bg-gray-200">
+                <a href="{{ route('all-activity') }}" class="p-2 rounded-full hover:bg-gray-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>

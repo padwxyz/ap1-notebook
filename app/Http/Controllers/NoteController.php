@@ -12,38 +12,16 @@ use App\Models\Item;
 
 class NoteController extends Controller
 {
-    // Fetch Facilities based on selected Location
-    public function getFacilities($locationId)
-    {
-        $facilities = Facility::where('location_id', $locationId)->get();
-        return response()->json($facilities);
-    }
-
-    // Fetch Categories based on selected Facility
-    public function getCategories($facilityId)
-    {
-        $categories = Category::where('facility_id', $facilityId)->get();
-        return response()->json($categories);
-    }
-
-    // Fetch Items based on selected Category
-    public function getItems($categoryId)
-    {
-        $items = Item::where('category_id', $categoryId)->get();
-        return response()->json($items);
-    }
-
     // Render the form for creating a note
     public function index(Request $request)
     {
         $title = 'Create a New Note';
         $pics = Pic::all();
         $locations = Location::all();
-        $facilities = collect(); // Empty collection for default
-        $categories = collect(); // Empty collection for default
-        $items = collect(); // Empty collection for default
+        $facilities = collect(); // Empty collection
+        $categories = collect(); // Empty collection
+        $items = collect(); // Empty collection
 
-        // Check if location, facility, or category is already selected to retain selection state
         $selectedLocation = $request->location;
         $selectedFacility = $request->facility;
         $selectedCategory = $request->category;

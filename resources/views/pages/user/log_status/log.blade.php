@@ -32,41 +32,29 @@
                 <thead class="bg-gray-200">
                     <tr>
                         <th class="py-2 px-4 border-b border-gray-300">No</th>
-                        <th class="py-2 px-4 border-b border-gray-300">Location</th>
-                        <th class="py-2 px-4 border-b border-gray-300">Facility</th>
-                        <th class="py-2 px-4 border-b border-gray-300">Category</th>
-                        <th class="py-2 px-4 border-b border-gray-300">Item</th>
-                        <th class="py-2 px-4 border-b border-gray-300">Problem</th>
-                        <th class="py-2 px-4 border-b border-gray-300">Activity</th>
-                        <th class="py-2 px-4 border-b border-gray-300">Status</th>
+                        <th class="px-4 py-2 border">Nama Barang</th>
+                        <th class="px-4 py-2 border">Kategori</th>
+                        <th class="px-4 py-2 border">Fasilitas</th>
+                        <th class="px-4 py-2 border">Lokasi Fasilitas</th>
+                        <th class="px-4 py-2 border">Jumlah</th>
+                        <th class="px-4 py-2 border">Kondisi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse($notes as $note)
-                    <tr>
-                        <td class="py-2 px-4 border-b border-gray-300">{{ $loop->iteration }}</td>
-                        <td class="py-2 px-4 border-b border-gray-300">{{ $note->location->location_name }}</td>
-                        <td class="py-2 px-4 border-b border-gray-300">{{ $note->facility->facility_name }}</td>
-                        <td class="py-2 px-4 border-b border-gray-300">{{ $note->category->category_name }}</td>
-                        <td class="py-2 px-4 border-b border-gray-300">{{ $note->item->item_name }}</td>
-                        <td class="py-2 px-4 border-b border-gray-300">{{ $note->problem }}</td>
-                        <td class="py-2 px-4 border-b border-gray-300">{{ $note->activity }}</td>
-                        <td class="py-2 px-4 border-b border-gray-300">
-                            <span class="px-2 py-1 rounded-lg 
-                            @if($note->status == 'todo') bg-gray-500 text-white 
-                            @elseif($note->status == 'pending') bg-yellow-500 text-white 
-                            @elseif($note->status == 'inprogress') bg-blue-500 text-white 
-                            @elseif($note->status == 'done') bg-green-500 text-white 
-                            @elseif($note->status == 'cancel') bg-red-500 text-white 
-                            @endif">
-                                {{ ucfirst($note->status) }}
-                            </span>
-                        </td>
-                    </tr>
+                    @forelse($items as $item)
+                        <tr>
+                            <td class="px-4 py-2 border">{{ $item->id }}</td>
+                            <td class="px-4 py-2 border">{{ $item->item_name }}</td>
+                            <td class="px-4 py-2 border">{{ $item->category->category_name }}</td>
+                            <td class="px-4 py-2 border">{{ $item->category->facility->facility_name }}</td>
+                            <td class="px-4 py-2 border">{{ $item->category->facility->location->location_name }}</td>
+                            <td class="px-4 py-2 border">{{ $item->quantity }}</td>
+                            <td class="px-4 py-2 border">{{ $item->condition }}</td>
+                        </tr>
                     @empty
-                    <tr>
-                        <td colspan="8" class="text-center py-2 px-4 border-b border-gray-300">No records found.</td>
-                    </tr>
+                        <tr>
+                            <td colspan="7" class="text-center py-2 px-4 border-b border-gray-300">No records found.</td>
+                        </tr>
                     @endforelse
                 </tbody>
             </table>
@@ -75,10 +63,10 @@
         <!-- Pagination -->
         <div class="flex justify-between items-center mt-4">
             <div class="text-sm text-gray-600">
-                Showing {{ $notes->firstItem() }} to {{ $notes->lastItem() }} of {{ $notes->total() }} entries
+                Showing {{ $items->firstItem() }} to {{ $items->lastItem() }} of {{ $items->total() }} entries
             </div>
             <div>
-                {{ $notes->links() }}
+                {{ $items->links() }}
             </div>
         </div>
     </section>
