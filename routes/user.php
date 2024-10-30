@@ -25,9 +25,10 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/note', [NoteController::class, 'index'])->name('note.index');
 Route::post('/note', [NoteController::class, 'store'])->name('note.store');
-Route::get('/get-facilities/{locationId}', [NoteController::class, 'getFacilities'])->name('get-facilities');
-Route::get('/get-categories/{facilityId}', [NoteController::class, 'getCategories'])->name('get-categories');
-Route::get('/get-items/{categoryId}', [NoteController::class, 'getItems'])->name('get-items');
+Route::get('/facilities/{locationId}', [NoteController::class, 'getFacilities']);
+Route::get('/categories/{facilityId}', [NoteController::class, 'getCategories']);
+Route::get('/items/{categoryId}', [NoteController::class, 'getItems']);
+
 
 Route::get('/all-activity', [NoteController::class, 'allActivity'])->name('all-activity');
 Route::get('/activity/{id}/details', [NoteController::class, 'showActivityDetails'])->name('activity-details');

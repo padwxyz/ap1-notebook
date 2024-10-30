@@ -25,9 +25,9 @@
             <div class="grid grid-cols-2 gap-4">
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-                    <input type="text" id="name" name="name" value="{{ old('name') }}"
+                    <input type="text" id="name" name="name" value="{{ $user->name ?? '' }}"
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        placeholder="Enter your name" required>
+                        readonly>
                 </div>
 
                 <div class="mb-4">
@@ -141,73 +141,4 @@
 @endsection
 
 @section('scripts')
-    <script>
-        // Facilities data based on location
-        const facilities = @json($facilities);
-        const categories = @json($categories);
-        const items = @json($items);
-
-        function loadFacilities() {
-            const locationId = document.getElementById('location').value;
-            const facilitySelect = document.getElementById('facility');
-            facilitySelect.innerHTML = '<option value="">Choose Facility</option>';
-
-            if (locationId && facilities[locationId]) {
-                facilities[locationId].forEach(facility => {
-                    const option = document.createElement('option');
-                    option.value = facility.id;
-                    option.text = facility.name;
-                    facilitySelect.appendChild(option);
-                });
-                facilitySelect.disabled = false;
-            } else {
-                facilitySelect.disabled = true;
-            }
-            resetSelect('category');
-            resetSelect('item');
-        }
-
-        function loadCategories() {
-            const facilityId = document.getElementById('facility').value;
-            const categorySelect = document.getElementById('category');
-            categorySelect.innerHTML = '<option value="">Choose Category</option>';
-
-            if (facilityId && categories[facilityId]) {
-                categories[facilityId].forEach(category => {
-                    const option = document.createElement('option');
-                    option.value = category.id;
-                    option.text = category.name;
-                    categorySelect.appendChild(option);
-                });
-                categorySelect.disabled = false;
-            } else {
-                categorySelect.disabled = true;
-            }
-            resetSelect('item');
-        }
-
-        function loadItems() {
-            const categoryId = document.getElementById('category').value;
-            const itemSelect = document.getElementById('item');
-            itemSelect.innerHTML = '<option value="">Choose Item</option>';
-
-            if (categoryId && items[categoryId]) {
-                items[categoryId].forEach(item => {
-                    const option = document.createElement('option');
-                    option.value = item.id;
-                    option.text = item.name;
-                    itemSelect.appendChild(option);
-                });
-                itemSelect.disabled = false;
-            } else {
-                itemSelect.disabled = true;
-            }
-        }
-
-        function resetSelect(selectId) {
-            const select = document.getElementById(selectId);
-            select.innerHTML = '<option value="">Choose ' + selectId.charAt(0).toUpperCase() + selectId.slice(1) +
-                '</option>';
-            select.disabled = true;
-        }
-    </script>
+    <script src="{{ asset('js/note.js') }}"></script>

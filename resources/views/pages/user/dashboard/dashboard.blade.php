@@ -52,7 +52,7 @@
                 @else
                     <ul>
                         @foreach ($recentActivities as $activity)
-                            <li class="mb-4">
+                            <li class="mb-12">
                                 <div class="flex justify-between">
                                     <div>
                                         <h3 class="text-2xl font-bold pb-4">{{ $activity->problem }}</h3>

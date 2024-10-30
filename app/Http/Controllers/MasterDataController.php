@@ -15,34 +15,11 @@ use App\Models\Note;
 
 class MasterDataController extends Controller
 {
-    // CRUD for Admin
-    
-
-    // CRUD for User
-    
-
-    // CRUD for PIC
-    
-
-    // CRUD for Location
-    
-
-    // CRUD for Facility
-    
-
-    // CRUD for Category
-    
-
-    // CRUD for Item
-    
-
-    // CRUD for Note
     public function indexNote()
     {
-        // Menggunakan eager loading untuk mengurangi jumlah query
         $datanotes = Note::with(['user', 'pic', 'location', 'facility', 'category', 'item'])->get();
-        $locations = Location::all(); // Mengambil data locations untuk form
-        $title = 'Datanote Management'; // Judul halaman yang sesuai
+        $locations = Location::all();
+        $title = 'Datanote Management';
         return view('pages.admin.master_data.datanote', compact('datanotes', 'locations', 'title'));
     }
 
