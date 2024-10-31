@@ -52,26 +52,25 @@
                 @else
                     <ul>
                         @foreach ($recentActivities as $activity)
-                            <li class="mb-12">
-                                <div class="flex justify-between">
+                            <li class="mb-5">
+                                <a href="{{ route('activity-details', ['id' => $activity->id]) }}"
+                                    class="flex items-center justify-between bg-white p-4 rounded-lg shadow-md">
                                     <div>
-                                        <h3 class="text-2xl font-bold pb-4">{{ $activity->problem }}</h3>
+                                        <h3 class="text-2xl font-bold pb-2">{{ $activity->problem }}</h3>
                                         <p class="text-lg">{{ $activity->activity }}</p>
-                                        <p class="text-gray-500 text-lg pb-2">Date:
+                                        <p class="text-gray-500 text-sm pb-2">Date:
                                             {{ \Carbon\Carbon::parse($activity->date)->format('d/m/Y') }}</p>
                                     </div>
                                     <div
                                         class="w-[130px] h-[40px] py-2 px-4 rounded-lg flex justify-center items-center text-white
-                                    @if ($activity->status == 'todo') bg-gray-500
-                                    @elseif($activity->status == 'pending') bg-yellow-500
-                                    @elseif($activity->status == 'inprogress') bg-blue-500
-                                    @elseif($activity->status == 'done') bg-green-500
-                                    @elseif($activity->status == 'cancel') bg-red-500 @endif">
+                                        @if ($activity->status == 'todo') bg-gray-500
+                                        @elseif($activity->status == 'pending') bg-yellow-500
+                                        @elseif($activity->status == 'inprogress') bg-blue-500
+                                        @elseif($activity->status == 'done') bg-green-500
+                                        @elseif($activity->status == 'cancel') bg-red-500 @endif">
                                         {{ ucfirst($activity->status) }}
                                     </div>
-                                </div>
-                                <a href="{{ route('activity-details', ['id' => $activity->id]) }}"
-                                    class="text-blue-500 underline">View Details</a>
+                                </a>
                             </li>
                         @endforeach
                     </ul>

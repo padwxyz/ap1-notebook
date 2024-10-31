@@ -6,21 +6,15 @@
 <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
     <div>
         <div class="bg-white mt-2 p-5 rounded-xl shadow-md flex flex-col space-y-6">
-
-            <!-- Header with Back Button and Title -->
             <div class="flex items-center mb-4">
-                <!-- Back Button with Icon -->
                 <a href="{{ route('all-activity') }}" class="p-2 rounded-full hover:bg-gray-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </a>
-
-                <!-- Title -->
                 <h1 class="text-[42px] font-bold ml-4">Activity Details</h1>
             </div>
 
-            <!-- Activity Header -->
             <div class="flex items-start justify-between">
                 <div class="flex-1">
                     <h3 class="text-2xl font-semibold">{{ $note->problem }}</h3>
@@ -47,7 +41,7 @@
                 <div class="flex-1 ml-10">
                     <p class="mt-12 text-gray-600"><span class="font-bold">Image:</span></p>
                     @if ($note->image)
-                        <img src="{{ asset('storage/' . $note->image) }}" alt="Reported Issue" class="mt-2 w-full h-auto rounded-lg shadow-md">
+                        <img src="{{ asset('storage/' . $note->image) }}" alt="Reported Issue" class="mt-2 w-[400px] h-[200px] object-cover rounded-lg shadow-md">
                     @else
                         <p>No image available</p>
                     @endif

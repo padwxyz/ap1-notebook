@@ -66,10 +66,22 @@ class ActivityController extends Controller
             ->when($filterType == 'location', function ($query) use ($filterValue) {
                 return $query->where('location_id', $filterValue);
             })
-            ->get();
+            ->get() ?? collect();
 
         $title = 'Filtered Activities';
-        return view('pages.filtered_activities', compact('notes', 'title'));
+
+        $viewMap = [
+            'category' => ['view' => 'pages.user.activity.activity_bycategory', 'data' => ['categories' => Category::all()]],
+            'facility' => ['view' => 'pages.user.activity.activity_byfacility', 'data' => ['facilities' => Facility::all()]],
+            'item' => ['view' => 'pages.user.activity.activity_byitem', 'data' => ['items' => Item::all()]],
+            'location' => ['view' => 'pages.user.activity.activity_bylocation', 'data' => ['locations' => Location::all()]],
+        ];
+
+        $viewData = $viewMap[$filterType];
+        $view = $viewData['view'];
+        $additionalData = $viewData['data'];
+
+        return view($view, array_merge(compact('notes', 'title'), $additionalData));
     }
 
     public function viewByStatus()

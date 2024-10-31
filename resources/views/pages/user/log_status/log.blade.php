@@ -32,12 +32,12 @@
                 <thead class="bg-gray-200">
                     <tr>
                         <th class="py-2 px-4 border-b border-gray-300">No</th>
-                        <th class="px-4 py-2 border">Nama Barang</th>
-                        <th class="px-4 py-2 border">Kategori</th>
-                        <th class="px-4 py-2 border">Fasilitas</th>
-                        <th class="px-4 py-2 border">Lokasi Fasilitas</th>
-                        <th class="px-4 py-2 border">Jumlah</th>
-                        <th class="px-4 py-2 border">Kondisi</th>
+                        <th class="px-4 py-2 border">Log Name</th>
+                        <th class="px-4 py-2 border">Category</th>
+                        <th class="px-4 py-2 border">Facility</th>
+                        <th class="px-4 py-2 border">Location</th>
+                        <th class="px-4 py-2 border">Quantity</th>
+                        <th class="px-4 py-2 border">Status</th>
                     </tr>
                 </thead>
                 <tbody>

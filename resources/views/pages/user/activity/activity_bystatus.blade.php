@@ -14,16 +14,17 @@
                     <div class="flex space-x-4">
                         <!-- To Do Column -->
                         <div class="flex-none w-[320px] bg-blue-100 rounded-lg shadow-lg h-[600px]">
-                            <div class="p-3 flex justify-center items-center bg-gray-500 text-white text-center rounded-t-lg">
+                            <div
+                                class="p-3 flex justify-center items-center bg-gray-500 text-white text-center rounded-t-lg">
                                 <h2 class="text-lg font-semibold">To Do</h2>
                             </div>
                             <div class="p-5 flex-grow overflow-y-auto">
                                 @foreach ($todos as $note)
                                     <a href="{{ route('activity-details', ['id' => $note->id]) }}">
-                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm">
+                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm border-l-8 border-gray-500">
                                             <h3 class="font-semibold text-lg text-gray-700">{{ $note->problem }}</h3>
-                                            <p class="text-gray-500">{{ $note->activity }}</p>
-                                            <p class="text-gray-400">{{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
+                                            <p class="text-gray-400">Date:
+                                                {{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
                                         </div>
                                     </a>
                                 @endforeach
@@ -31,16 +32,17 @@
                         </div>
                         <!-- Pending Column -->
                         <div class="flex-none w-[320px] bg-yellow-100 rounded-lg shadow-lg h-[600px]">
-                            <div class="p-3 flex justify-center items-center bg-yellow-500 text-white text-center rounded-t-lg">
+                            <div
+                                class="p-3 flex justify-center items-center bg-yellow-500 text-white text-center rounded-t-lg">
                                 <h2 class="text-lg font-semibold">Pending</h2>
                             </div>
                             <div class="p-5 flex-grow overflow-y-auto">
                                 @foreach ($pendings as $note)
                                     <a href="{{ route('activity-details', ['id' => $note->id]) }}">
-                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm">
+                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm border-l-8 border-yellow-500">
                                             <h3 class="font-semibold text-lg text-gray-700">{{ $note->problem }}</h3>
-                                            <p class="text-gray-500">{{ $note->activity }}</p>
-                                            <p class="text-gray-400">{{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
+                                            <p class="text-gray-400">Date:
+                                                {{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
                                         </div>
                                     </a>
                                 @endforeach
@@ -49,16 +51,17 @@
 
                         <!-- In Progress Column -->
                         <div class="flex-none w-[320px] bg-blue-100 rounded-lg shadow-lg h-[600px]">
-                            <div class="p-3 flex justify-center items-center bg-blue-500 text-white text-center rounded-t-lg">
+                            <div
+                                class="p-3 flex justify-center items-center bg-blue-500 text-white text-center rounded-t-lg">
                                 <h2 class="text-lg font-semibold">In Progress</h2>
                             </div>
                             <div class="p-5 flex-grow overflow-y-auto">
                                 @foreach ($inProgress as $note)
                                     <a href="{{ route('activity-details', ['id' => $note->id]) }}">
-                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm">
+                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm border-l-8 border-blue-500">
                                             <h3 class="font-semibold text-lg text-gray-700">{{ $note->problem }}</h3>
-                                            <p class="text-gray-500">{{ $note->activity }}</p>
-                                            <p class="text-gray-400">{{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
+                                            <p class="text-gray-400">Date:
+                                                {{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
                                         </div>
                                     </a>
                                 @endforeach
@@ -67,16 +70,17 @@
 
                         <!-- Done Column -->
                         <div class="flex-none w-[320px] bg-green-100 rounded-lg shadow-lg h-[600px]">
-                            <div class="p-3 flex justify-center items-center bg-green-500 text-white text-center rounded-t-lg">
+                            <div
+                                class="p-3 flex justify-center items-center bg-green-500 text-white text-center rounded-t-lg">
                                 <h2 class="text-lg font-semibold">Done</h2>
                             </div>
                             <div class="p-5 flex-grow overflow-y-auto">
                                 @foreach ($dones as $note)
                                     <a href="{{ route('activity-details', ['id' => $note->id]) }}">
-                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm">
+                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm border-l-8 border-green-500">
                                             <h3 class="font-semibold text-lg text-gray-700">{{ $note->problem }}</h3>
-                                            <p class="text-gray-500">{{ $note->activity }}</p>
-                                            <p class="text-gray-400">{{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
+                                            <p class="text-gray-400">Date:
+                                                {{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
                                         </div>
                                     </a>
                                 @endforeach
@@ -85,16 +89,17 @@
 
                         <!-- Cancel Column -->
                         <div class="flex-none w-[320px] bg-red-100 rounded-lg shadow-lg h-[600px]">
-                            <div class="p-3 flex justify-center items-center bg-red-500 text-white text-center rounded-t-lg">
+                            <div
+                                class="p-3 flex justify-center items-center bg-red-500 text-white text-center rounded-t-lg">
                                 <h2 class="text-lg font-semibold">Cancel</h2>
                             </div>
                             <div class="p-5 flex-grow overflow-y-auto">
                                 @foreach ($cancels as $note)
                                     <a href="{{ route('activity-details', ['id' => $note->id]) }}">
-                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm">
+                                        <div class="bg-white p-4 rounded-lg mb-3 shadow-sm border-l-8 border-red-500">
                                             <h3 class="font-semibold text-lg text-gray-700">{{ $note->problem }}</h3>
-                                            <p class="text-gray-500">{{ $note->activity }}</p>
-                                            <p class="text-gray-400">{{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
+                                            <p class="text-gray-400">Date:
+                                                {{ \Carbon\Carbon::parse($note->date)->format('d/m/Y') }}</p>
                                         </div>
                                     </a>
                                 @endforeach
