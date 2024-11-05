@@ -14,7 +14,6 @@
 
         <div></div>
 
-        <!-- Menu -->
         <div id="menu" class="flex flex-col space-y-3 mt-10 flex-grow">
             <a href="{{ route('admin-dashboard') }}"
                 class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
@@ -27,7 +26,6 @@
                 <span class="">Dashboard</span>
             </a>
 
-            <!-- Dropdown Menu for Data Master -->
             <div class="relative" x-data="{ open: false }">
                 <button @click="open = !open"
                     class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out w-full flex items-center">
@@ -38,7 +36,7 @@
                             d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
                             clip-rule="evenodd"></path>
                     </svg>
-                    <span class="flex-1 text-left">Data Master</span>
+                    <span class="flex-1 text-left">Master Data</span>
                     <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -47,7 +45,6 @@
                     </svg>
                 </button>
 
-                <!-- Dropdown Links -->
                 <div x-show="open" @click.away="open = false"
                     class="absolute left-0 flex flex-col bg-white shadow-md rounded-md mt-1 w-full z-10 p-2"
                     x-transition:enter="transition ease-out duration-200"
@@ -58,34 +55,33 @@
                     x-transition:leave-end="opacity-0 transform scale-95">
                     <a href="{{ route('admin.index') }}"
                         class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        Admin</a>
+                        Admin Data</a>
                     <a href="{{ route('user.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        User</a>
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        User Data</a>
                     <a href="{{ route('pic.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        PIC</a>
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        PIC Data</a>
                     <a href="{{ route('datanote.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        Note</a>
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        Note Data</a>
                     <a href="{{ route('location.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        Lokasi</a>
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        Location Data</a>
                     <a href="{{ route('facility.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        Fasilitas</a>
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        Facility Data</a>
                     <a href="{{ route('category.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        Kategori</a>
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        Category Data</a>
                     <a href="{{ route('item.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
-                        Item</a>
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        Item Data</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Logout -->
     <div id="logout" class="mt-6">
         <a href=""
             class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-red-600 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">

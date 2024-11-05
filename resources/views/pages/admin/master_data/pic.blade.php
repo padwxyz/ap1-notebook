@@ -5,10 +5,10 @@
 @section('container')
     <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Manajemen PIC</h1>
+            <h1 class="text-2xl font-bold">PIC Management Data</h1>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
                 onclick="toggleModal('addPicModal')">
-                <i class="fas fa-plus mr-2"></i>Tambah PIC
+                <i class="fas fa-plus mr-2"></i>Add PIC
             </button>
         </div>
 
@@ -16,9 +16,9 @@
             <thead>
                 <tr class="bg-gray-100">
                     <th class="px-4 py-2 border">ID</th>
-                    <th class="px-4 py-2 border">Nama PIC</th>
-                    <th class="px-4 py-2 border">Posisi</th>
-                    <th class="px-4 py-2 border">Aksi</th>
+                    <th class="px-4 py-2 border">PIC Name</th>
+                    <th class="px-4 py-2 border">Position</th>
+                    <th class="px-4 py-2 border">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,7 +49,6 @@
                         </td>
                     </tr>
 
-                    <!-- Modal Edit PIC -->
                     <div id="editPicModal{{ $pic->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -77,7 +76,6 @@
                         </div>
                     </div>
 
-                    <!-- Modal for View Data PIC -->
                     <div id="viewPicModal{{ $pic->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -85,11 +83,11 @@
                             <div class="mb-4">
                                 <label for="pic_name" class="block text-gray-700">PIC Name</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $pic->pic_name }}</p>
-                            </div>                    
+                            </div>
                             <div class="mb-4">
                                 <label for="position" class="block text-gray-700">PIC Position</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $pic->position }}</p>
-                            </div>                    
+                            </div>
                             <div class="mb-4">
                                 <label for="created_at" class="block text-gray-700">Created At</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">
@@ -121,7 +119,6 @@
             </tbody>
         </table>
 
-        <!-- Modal Tambah PIC -->
         <div id="addPicModal" class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
             <div class="bg-white p-8 rounded shadow-lg w-1/3">
                 <h2 class="text-2xl mb-6 font-semibold">Tambah PIC</h2>

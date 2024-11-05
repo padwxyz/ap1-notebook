@@ -5,10 +5,10 @@
 @section('container')
     <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Manajemen Kategori</h1>
+            <h1 class="text-2xl font-bold">Category Management Data</h1>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
                 onclick="toggleModal('addCategoryModal')">
-                <i class="fas fa-plus mr-2"></i>Tambah Kategori
+                <i class="fas fa-plus mr-2"></i>Add Categoty
             </button>
         </div>
 
@@ -16,10 +16,10 @@
             <thead>
                 <tr class="bg-gray-100">
                     <th class="px-4 py-2 border">ID</th>
-                    <th class="px-4 py-2 border">Nama Kategori</th>
-                    <th class="px-4 py-2 border">Fasilitas</th>
-                    <th class="px-4 py-2 border">Lokasi Fasilitas</th>
-                    <th class="px-4 py-2 border">Aksi</th>
+                    <th class="px-4 py-2 border">Category Name</th>
+                    <th class="px-4 py-2 border">Facility</th>
+                    <th class="px-4 py-2 border">Location</th>
+                    <th class="px-4 py-2 border">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,7 +51,6 @@
                         </td>
                     </tr>
 
-                    <!-- Modal Edit Kategori -->
                     <div id="editCategoryModal{{ $category->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -84,7 +83,6 @@
                         </div>
                     </div>
 
-                    <!-- Modal for View Data Category -->
                     <div id="viewCategoryModal{{ $category->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">

@@ -5,7 +5,7 @@
 @section('container')
     <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold">User Management</h1>
+            <h1 class="text-2xl font-bold">User Management Data</h1>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
                 onclick="toggleModal('addUserModal')">
                 <i class="fas fa-plus mr-2"></i>Add User
@@ -51,7 +51,6 @@
                         </td>
                     </tr>
 
-                    <!-- Modal for Edit User -->
                     <div id="editUserModal{{ $user->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -89,7 +88,6 @@
                         </div>
                     </div>
 
-                    <!-- Modal for View Data User -->
                     <div id="viewUserModal{{ $user->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -97,15 +95,15 @@
                             <div class="mb-4">
                                 <label for="name" class="block text-gray-700">User Name</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $user->name }}</p>
-                            </div>                                        
+                            </div>
                             <div class="mb-4">
                                 <label for="username" class="block text-gray-700">Username</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $user->username }}</p>
-                            </div>                                        
+                            </div>
                             <div class="mb-4">
                                 <label for="email" class="block text-gray-700">User Email</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $user->email }}</p>
-                            </div>                                        
+                            </div>
                             <div class="mb-4">
                                 <label for="created_at" class="block text-gray-700">Created At</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">
@@ -137,7 +135,6 @@
             </tbody>
         </table>
 
-        <!-- Modal for Add User -->
         <div id="addUserModal" class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
             <div class="bg-white p-8 rounded shadow-lg w-1/3">
                 <h2 class="text-2xl mb-6 font-semibold">Add User</h2>

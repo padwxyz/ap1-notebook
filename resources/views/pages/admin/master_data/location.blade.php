@@ -5,10 +5,10 @@
 @section('container')
     <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Manajemen Lokasi</h1>
+            <h1 class="text-2xl font-bold">Location Management Data</h1>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
                 onclick="toggleModal('addLocationModal')">
-                <i class="fas fa-plus mr-2"></i>Tambah Lokasi
+                <i class="fas fa-plus mr-2"></i>Add Location
             </button>
         </div>
 
@@ -16,8 +16,8 @@
             <thead>
                 <tr class="bg-gray-100">
                     <th class="px-4 py-2 border">ID</th>
-                    <th class="px-4 py-2 border">Nama Lokasi</th>
-                    <th class="px-4 py-2 border">Aksi</th>
+                    <th class="px-4 py-2 border">Location Name</th>
+                    <th class="px-4 py-2 border">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,7 +47,6 @@
                         </td>
                     </tr>
 
-                    <!-- Modal Edit Lokasi -->
                     <div id="editLocationModal{{ $location->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -70,7 +69,6 @@
                         </div>
                     </div>
 
-                    <!-- Modal for View Data Location -->
                     <div id="viewLocationModal{{ $location->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -78,7 +76,7 @@
                             <div class="mb-4">
                                 <label for="location_name" class="block text-gray-700">Location Name</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $location->location_name }}</p>
-                            </div>                    
+                            </div>
                             <div class="mb-4">
                                 <label for="created_at" class="block text-gray-700">Created At</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">
@@ -110,7 +108,6 @@
             </tbody>
         </table>
 
-        <!-- Modal Tambah Lokasi -->
         <div id="addLocationModal"
             class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
             <div class="bg-white p-8 rounded shadow-lg w-1/3">

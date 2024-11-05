@@ -5,10 +5,10 @@
 @section('container')
     <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Manajemen Barang</h1>
+            <h1 class="text-2xl font-bold">Item Management Data</h1>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
                 onclick="toggleModal('addItemModal')">
-                <i class="fas fa-plus mr-2"></i>Tambah Barang
+                <i class="fas fa-plus mr-2"></i>Add Data
             </button>
         </div>
 
@@ -16,13 +16,13 @@
             <thead>
                 <tr class="bg-gray-100">
                     <th class="px-4 py-2 border">ID</th>
-                    <th class="px-4 py-2 border">Nama Barang</th>
-                    <th class="px-4 py-2 border">Kategori</th>
-                    <th class="px-4 py-2 border">Fasilitas</th>
-                    <th class="px-4 py-2 border">Lokasi Fasilitas</th>
-                    <th class="px-4 py-2 border">Jumlah</th>
-                    <th class="px-4 py-2 border">Kondisi</th>
-                    <th class="px-4 py-2 border">Aksi</th>
+                    <th class="px-4 py-2 border">Item Name</th>
+                    <th class="px-4 py-2 border">Category</th>
+                    <th class="px-4 py-2 border">Facility</th>
+                    <th class="px-4 py-2 border">Location</th>
+                    <th class="px-4 py-2 border">Quantity</th>
+                    <th class="px-4 py-2 border">Condition</th>
+                    <th class="px-4 py-2 border">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,7 +57,6 @@
                         </td>
                     </tr>
 
-                    <!-- Modal Edit Barang -->
                     <div id="editItemModal{{ $item->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -104,7 +103,6 @@
                         </div>
                     </div>
 
-                    <!-- Modal for View Data Item -->
                     <div id="viewItemModal{{ $item->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -112,27 +110,29 @@
                             <div class="mb-4">
                                 <label for="item_name" class="block text-gray-700">item Name</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $item->item_name }}</p>
-                            </div>                    
+                            </div>
                             <div class="mb-4">
                                 <label for="category_name" class="block text-gray-700">Category Name</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $item->category->category_name }}</p>
-                            </div>                    
+                            </div>
                             <div class="mb-4">
                                 <label for="facility_name" class="block text-gray-700">Facility Name</label>
-                                <p class="border rounded w-full px-3 py-2 mt-1">{{ $item->category->facility->facility_name }}</p>
-                            </div>                    
+                                <p class="border rounded w-full px-3 py-2 mt-1">
+                                    {{ $item->category->facility->facility_name }}</p>
+                            </div>
                             <div class="mb-4">
                                 <label for="location_name" class="block text-gray-700">Location Name</label>
-                                <p class="border rounded w-full px-3 py-2 mt-1">{{ $item->category->facility->location->location_name }}</p>
-                            </div>                    
+                                <p class="border rounded w-full px-3 py-2 mt-1">
+                                    {{ $item->category->facility->location->location_name }}</p>
+                            </div>
                             <div class="mb-4">
                                 <label for="quantity" class="block text-gray-700">Quantity</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $item->quantity }}</p>
-                            </div>                    
+                            </div>
                             <div class="mb-4">
                                 <label for="condition" class="block text-gray-700">Condition</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">{{ $item->condition }}</p>
-                            </div>                    
+                            </div>
                             <div class="mb-4">
                                 <label for="created_at" class="block text-gray-700">Created At</label>
                                 <p class="border rounded w-full px-3 py-2 mt-1">
@@ -164,7 +164,6 @@
             </tbody>
         </table>
 
-        <!-- Modal Tambah Barang -->
         <div id="addItemModal" class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
             <div class="bg-white p-8 rounded shadow-lg w-1/3">
                 <h2 class="text-2xl mb-6 font-semibold">Tambah Barang</h2>

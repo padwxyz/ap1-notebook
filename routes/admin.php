@@ -75,16 +75,9 @@ Route::prefix('item')->group(function () {
     Route::delete('item/delete/{id}', [ItemController::class, 'delete'])->name('item.delete');
 });
 
-
-Route::get('datanote', [MasterDataController::class, 'indexNote'])->name('datanote.index');
-Route::post('datanote/store', [MasterDataController::class, 'storeNote'])->name('datanote.store');
-Route::put('datanote/update/{id}', [MasterDataController::class, 'updateNote'])->name('datanote.update');
-Route::delete('datanote/delete/{id}', [MasterDataController::class, 'deleteNote'])->name('datanote.delete');
-
-Route::get('getFacilitiesByLocation/{location_id}', [MasterDataController::class, 'getFacilitiesByLocation']);
-Route::get('getCategoriesByFacility/{facility_id}', [MasterDataController::class, 'getCategoriesByFacility']);
-Route::get('getItemsByCategory/{category_id}', [MasterDataController::class, 'getItemsByCategory']);
-
-Route::get('/get-facilities/{location_id}', [NoteController::class, 'getFacilities']);
-Route::get('/get-categories/{facility_id}', [NoteController::class, 'getCategories']);
-Route::get('/get-items/{category_id}', [NoteController::class, 'getItems']);
+Route::prefix('datanote')->group(function () {
+    Route::get('datanote', [NoteController::class, 'indexNote'])->name('datanote.index');
+    Route::post('datanote/store', [NoteController::class, 'storeNote'])->name('datanote.store');
+    Route::put('datanote/update/{id}', [NoteController::class, 'updateNote'])->name('datanote.update');
+    Route::delete('datanote/delete/{id}', [NoteController::class, 'deleteNote'])->name('datanote.delete');
+});

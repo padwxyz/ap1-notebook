@@ -33,7 +33,6 @@
 
     {{-- service --}}
     <section id="Service" class="mb-[110px]">
-        <!-- Container untuk membatasi lebar konten -->
         <div class="container mx-auto px-4 md:px-8">
             <div class="text-center mb-10">
                 <h1 class="text-[36px] sm:text-[48px] md:text-[60px] font-bold leading-tight">Our Services</h1>
@@ -42,10 +41,7 @@
                 </p>
                 <div class="w-[200px] sm:w-[300px] md:w-[350px] lg:w-[450px] h-1 bg-[#66B82D] mx-auto mb-8"></div>
             </div>
-    
-            <!-- Grid untuk Services -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Service Item 1 -->
                 <div class="flex flex-col items-center justify-center p-6 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div class="text-green-500 text-3xl mb-4">
                         📋
@@ -53,8 +49,6 @@
                     <h3 class="text-lg font-bold mb-2">Catatan Kegiatan</h3>
                     <p class="text-gray-600 text-sm text-center">Catat setiap tugas dan aktivitas dengan mudah untuk memastikan semua pekerjaan terdokumentasi dengan baik.</p>
                 </div>
-    
-                <!-- Service Item 2 -->
                 <div class="flex flex-col items-center justify-center p-6 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div class="text-blue-500 text-3xl mb-4">
                         ✅
@@ -62,8 +56,6 @@
                     <h3 class="text-lg font-bold mb-2">Atur Status Tugas</h3>
                     <p class="text-gray-600 text-sm text-center">Tandai pekerjaan sebagai "Sedang Dilakukan", "Pending", atau "Selesai" untuk memudahkan pengelolaan dan prioritas.</p>
                 </div>
-    
-                <!-- Service Item 3 -->
                 <div class="flex flex-col items-center justify-center p-6 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div class="text-purple-500 text-3xl mb-4">
                         🌍
@@ -71,8 +63,6 @@
                     <h3 class="text-lg font-bold mb-2">Akses Fleksibel</h3>
                     <p class="text-gray-600 text-sm text-center">Kelola catatan Anda kapan saja dan di mana saja melalui platform digital yang bisa diakses dari berbagai perangkat.</p>
                 </div>
-    
-                <!-- Service Item 4 -->
                 <div class="flex flex-col items-center justify-center p-6 border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div class="text-red-500 text-3xl mb-4">
                         🗂️

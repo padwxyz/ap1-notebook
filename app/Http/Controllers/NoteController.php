@@ -105,6 +105,33 @@ class NoteController extends Controller
         return redirect()->route('note.index')->with('success', 'Note saved successfully!');
     }
 
+    public function indexNote()
+    {
+        $datanotes = Note::with(['user', 'pic', 'location', 'facility', 'category', 'item'])->get();
+        $locations = Location::all();
+        $title = 'Datanote Management';
+        return view('pages.admin.master_data.datanote', compact('datanotes', 'locations', 'title'));
+    }
+
+    public function storeNote(Request $request)
+    {
+        Note::create($request->all());
+        return redirect()->back()->with('success', 'Note created successfully.');
+    }
+
+    public function updateNote(Request $request, $id)
+    {
+        $note = Note::findOrFail($id);
+        $note->update($request->all());
+        return redirect()->back()->with('success', 'Note updated successfully.');
+    }
+
+    public function deleteNote($id)
+    {
+        Note::findOrFail($id)->delete();
+        return redirect()->back()->with('success', 'Note deleted successfully.');
+    }
+
     public function allActivity()
     {
         $title = 'All Activity';

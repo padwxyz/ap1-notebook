@@ -5,10 +5,10 @@
 @section('container')
     <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Manajemen Data Datanote</h1>
+            <h1 class="text-2xl font-bold">Note Management Data</h1>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
                 onclick="toggleModal('addDatanoteModal')">
-                <i class="fas fa-plus mr-2"></i>Tambah Datanote
+                <i class="fas fa-plus mr-2"></i>Add Note
             </button>
         </div>
 
@@ -16,20 +16,19 @@
             <thead>
                 <tr class="bg-gray-100">
                     <th class="px-4 py-2 border">ID</th>
-                    <th class="px-4 py-2 border">Nama Pengguna</th>
+                    <th class="px-4 py-2 border">Name</th>
                     <th class="px-4 py-2 border">PIC</th>
-                    <th class="px-4 py-2 border">Lokasi</th>
-                    <th class="px-4 py-2 border">Fasilitas</th>
-                    <th class="px-4 py-2 border">Kategori</th>
+                    <th class="px-4 py-2 border">Location</th>
+                    <th class="px-4 py-2 border">Facility</th>
+                    <th class="px-4 py-2 border">Category</th>
                     <th class="px-4 py-2 border">Item</th>
-                    <th class="px-4 py-2 border">Nama</th>
-                    <th class="px-4 py-2 border">Tanggal</th>
-                    <th class="px-4 py-2 border">Waktu</th>
-                    <th class="px-4 py-2 border">Masalah</th>
-                    <th class="px-4 py-2 border">Aktivitas</th>
+                    <th class="px-4 py-2 border">Date</th>
+                    <th class="px-4 py-2 border">Time</th>
+                    <th class="px-4 py-2 border">Problem</th>
+                    <th class="px-4 py-2 border">Activity</th>
                     <th class="px-4 py-2 border">Status</th>
-                    <th class="px-4 py-2 border">Gambar</th>
-                    <th class="px-4 py-2 border">Aksi</th>
+                    <th class="px-4 py-2 border">Image</th>
+                    <th class="px-4 py-2 border">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +41,6 @@
                         <td class="px-4 py-2 border">{{ $datanote->facility->facility_name }}</td>
                         <td class="px-4 py-2 border">{{ $datanote->category->category_name }}</td>
                         <td class="px-4 py-2 border">{{ $datanote->item->item_name }}</td>
-                        <td class="px-4 py-2 border">{{ $datanote->name }}</td>
                         <td class="px-4 py-2 border">{{ $datanote->date }}</td>
                         <td class="px-4 py-2 border">{{ $datanote->time }}</td>
                         <td class="px-4 py-2 border">{{ $datanote->problem }}</td>
@@ -74,7 +72,6 @@
                         </td>
                     </tr>
 
-                    <!-- Modal Edit Datanote -->
                     <div id="editDatanoteModal{{ $datanote->id }}"
                         class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
                         <div class="bg-white p-8 rounded shadow-lg w-1/3">
@@ -140,7 +137,6 @@
             </tbody>
         </table>
 
-        <!-- Modal Tambah Datanote -->
         <div id="addDatanoteModal"
             class="fixed inset-0 flex items-center justify-center z-10 bg-black bg-opacity-50 hidden">
             <div class="bg-white p-8 rounded shadow-lg w-1/3">

@@ -5,7 +5,7 @@
 @section('container')
     <section class="pl-24 pr-20 my-10 ml-56 flex-grow">
         <div class="flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Admin Management</h1>
+            <h1 class="text-2xl font-bold">Admin Management Data</h1>
             <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
                 onclick="toggleModal('addAdminModal')">
                 <i class="fas fa-plus mr-2"></i>Add Admin

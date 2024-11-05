@@ -50,7 +50,6 @@
 </nav>
 
 <script>
-    // Navbar scroll change background color
     window.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
@@ -62,7 +61,6 @@
         }
     });
 
-    // Mobile menu toggle and background color change
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const navbar = document.getElementById('navbar');
@@ -70,12 +68,10 @@
     menuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
 
-        // Change background color if mobile menu is open
         if (!mobileMenu.classList.contains('hidden')) {
             navbar.classList.add('bg-[#0045A4]');
             navbar.classList.remove('bg-transparent');
         } else {
-            // Only make it transparent again if the page hasn't been scrolled
             if (window.scrollY <= 50) {
                 navbar.classList.remove('bg-[#0045A4]');
                 navbar.classList.add('bg-transparent');
