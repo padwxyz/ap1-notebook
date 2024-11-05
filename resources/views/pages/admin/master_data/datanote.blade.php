@@ -28,7 +28,7 @@
                     <th class="px-4 py-2 border">Activity</th>
                     <th class="px-4 py-2 border">Status</th>
                     <th class="px-4 py-2 border">Image</th>
-                    <th class="px-4 py-2 border">Action</th>
+                    <th class="px-4 py-2 border">Actions</th>
                 </tr>
             </thead>
             <tbody>

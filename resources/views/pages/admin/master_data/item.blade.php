@@ -22,7 +22,7 @@
                     <th class="px-4 py-2 border">Location</th>
                     <th class="px-4 py-2 border">Quantity</th>
                     <th class="px-4 py-2 border">Condition</th>
-                    <th class="px-4 py-2 border">Action</th>
+                    <th class="px-4 py-2 border">Actions</th>
                 </tr>
             </thead>
             <tbody>

@@ -18,7 +18,7 @@
                     <th class="px-4 py-2 border">ID</th>
                     <th class="px-4 py-2 border">PIC Name</th>
                     <th class="px-4 py-2 border">Position</th>
-                    <th class="px-4 py-2 border">Action</th>
+                    <th class="px-4 py-2 border">Actions</th>
                 </tr>
             </thead>
             <tbody>

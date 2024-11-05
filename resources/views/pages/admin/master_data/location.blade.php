@@ -17,7 +17,7 @@
                 <tr class="bg-gray-100">
                     <th class="px-4 py-2 border">ID</th>
                     <th class="px-4 py-2 border">Location Name</th>
-                    <th class="px-4 py-2 border">Action</th>
+                    <th class="px-4 py-2 border">Actions</th>
                 </tr>
             </thead>
             <tbody>
