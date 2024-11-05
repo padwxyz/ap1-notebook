@@ -39,17 +39,12 @@ Route::get('/activity-by-facility', [ActivityController::class, 'viewByFacility'
 Route::get('/activity-by-item', [ActivityController::class, 'viewByItem'])->name('activity-by-item');
 Route::get('/activity-by-location', [ActivityController::class, 'viewByLocation'])->name('activity-by-location');
 
-// Route to Process Filter
 Route::get('/activity/filter', [ActivityController::class, 'filterActivity'])->name('activity.filter');
 
-// View Activity by Status
 Route::get('/activity-by-status', [ActivityController::class, 'viewByStatus'])->name('activity-by-status');
 
-// Add Comment on Note
 Route::post('/note/{id}/add-comment', [NoteController::class, 'addComment'])->name('note.addComment');
 
-// History Route
 Route::get('/history', [HistoryController::class, 'index'])->name('note.history');
 
-// Log Status Route
 Route::get('/log-status', [LogStatusController::class, 'index'])->name('log-status');

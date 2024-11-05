@@ -12,7 +12,7 @@ class FacilityController extends Controller
     {
         $facilities = Facility::with('location')->get();
         $locations = Location::all();
-        $title = 'Facility Data';
+        $title = 'Facility Management Data';
         return view('pages.admin.master_data.facility', compact('facilities', 'locations', 'title'));
     }
 

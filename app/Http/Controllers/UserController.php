@@ -11,7 +11,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        $title = 'User Data';
+        $title = 'User Management Data';
         return view('pages.admin.master_data.user', compact('users', 'title'));
     }
 
@@ -46,7 +46,8 @@ class UserController extends Controller
         ]);
 
         $user->name = $validatedData['name'];
-        $user->email = $validatedData['email'];        $user->username = $validatedData['username'];
+        $user->email = $validatedData['email'];
+        $user->username = $validatedData['username'];
 
         if ($request->filled('password')) {
             $user->password = Hash::make($validatedData['password']);

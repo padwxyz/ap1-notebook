@@ -11,7 +11,7 @@ class AdminController extends Controller
     public function index()
     {
         $admins = Admin::all();
-        $title = 'Admin Data';
+        $title = 'Admin Management Data';
         return view('pages.admin.master_data.admin', compact('admins', 'title'));
     }
 

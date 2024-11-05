@@ -54,7 +54,7 @@
                     x-transition:leave-start="opacity-100 transform scale-100"
                     x-transition:leave-end="opacity-0 transform scale-95">
                     <a href="{{ route('admin.index') }}"
-                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">Data
+                        class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
                         Admin Data</a>
                     <a href="{{ route('user.index') }}"
                         class="text-sm font-medium text-gray-700 py-2 px-3 hover:bg-[#0045A4] hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">

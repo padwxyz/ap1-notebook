@@ -12,7 +12,7 @@ class ItemController extends Controller
     {
         $items = Item::with('category.facility.location')->get();
         $categories = Category::with('facility.location')->get();
-        $title = 'Item Data';
+        $title = 'Item Management Data';
         return view('pages.admin.master_data.item', compact('items', 'categories', 'title'));
     }
 

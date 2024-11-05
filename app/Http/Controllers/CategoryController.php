@@ -12,7 +12,7 @@ class CategoryController extends Controller
     {
         $categories = Category::with('facility.location')->get();
         $facilities = Facility::with('location')->get();
-        $title = 'Category Data';
+        $title = 'Category Management Data';
         return view('pages.admin.master_data.category', compact('categories', 'facilities', 'title'));
     }
 

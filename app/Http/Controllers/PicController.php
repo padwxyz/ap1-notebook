@@ -10,7 +10,7 @@ class PicController extends Controller
     public function index()
     {
         $pics = Pic::all();
-        $title = 'PIC Data';
+        $title = 'PIC Management Data';
         return view('pages.admin.master_data.pic', compact('pics', 'title'));
     }
 

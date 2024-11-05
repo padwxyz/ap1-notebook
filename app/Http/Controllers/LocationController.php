@@ -10,7 +10,7 @@ class LocationController extends Controller
     public function index()
     {
         $locations = Location::all();
-        $title = 'Location Data';
+        $title = 'Location Management Data';
         return view('pages.admin.master_data.location', compact('locations', 'title'));
     }
 

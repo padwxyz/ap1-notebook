@@ -8,9 +8,6 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\MasterDataController;
-use App\Models\Facility;
-use App\Models\Pic;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/admin-login', function () {

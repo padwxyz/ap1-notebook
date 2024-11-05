@@ -32,7 +32,7 @@ class NoteController extends Controller
 
     public function index(Request $request)
     {
-        $title = 'Create a New Note';
+        $title = 'New Note';
         $user = \App\Models\User::first();
 
         $pics = Pic::all();
@@ -109,7 +109,7 @@ class NoteController extends Controller
     {
         $datanotes = Note::with(['user', 'pic', 'location', 'facility', 'category', 'item'])->get();
         $locations = Location::all();
-        $title = 'Datanote Management';
+        $title = 'Note Management Data';
         return view('pages.admin.master_data.datanote', compact('datanotes', 'locations', 'title'));
     }
 

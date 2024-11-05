@@ -9,7 +9,7 @@ class HistoryController extends Controller
 {
     public function index()
     {
-        $title = 'All Activity';
+        $title = 'History';
         $notes = Note::all();
         return view('pages.user.history.history', compact('title', 'notes'));
     }
